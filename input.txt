@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Calibri', Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.header {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #059669, #d97706, #dc2626);
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.warning {
+    background: #fef3c7;
+    color: #d97706;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 15px;
+    border: 2px solid #f59e0b;
+    font-size: 14px;
+}
+
+.content {
+    padding: 40px;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border-left: 5px solid #2563eb;
+    transition: transform 0.2s;
+}
+
+.section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #1e40af;
+    margin-bottom: 15px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section h2::before {
+    content: '🔒';
+    font-size: 20px;
+}
+
+.demo-btn {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: white;
+    border: none;
+    padding: 16px 35px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+}
+
+.demo-btn:hover {
+    background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 8px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Phishing Page Styles */
+.phishing-body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.phishing-container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    width: 420px;
+    border: 1px solid #e5e7eb;
+}
+
+.phishing-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.phishing-header h2 {
+    color: #1a73e8;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.phishing-subtitle {
+    color: #5f6368;
+    font-size: 16px;
+}
+
+.phishing-form {
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #3c4043;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #dadce0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+.signin-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #1a73e8 0%, #1669c7 100%);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.signin-btn:hover {
+    background: linear-gradient(135deg, #1669c7 0%, #1557a5 100%);
+    transform: translateY(-1px);
+}
+
+.phishing-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.phishing-links a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.phishing-links a:hover {
+    text-decoration: underline;
+}
+
+.security-warning {
+    background: #fffbeb;
+    border: 2px solid #f59e0b;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: #d97706;
+    font-weight: 500;
+}
+
+/* Results Page Styles */
+.results-section {
+    padding: 40px;
+}
+
+.results-box {
+    background: #f0f9ff;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border: 2px solid #bae6fd;
+}
+
+.captured-data {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #e5e7eb;
+}
+
+.good {
+    color: #059669;
+    font-weight: bold;
+    background: #f0fdf4;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.bad {
+    color: #dc2626;
+    font-weight: bold;
+    background: #fef2f2;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.tip-box {
+    background: #f0fdf9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 5px solid #059669;
+    transition: transform 0.2s;
+}
+
+.tip-box:hover {
+    transform: translateX(5px);
+}
+
+.tip-box h3 {
+    color: #059669;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.warning-message {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 20px 0;
+    border: 2px solid #fecaca;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.action-buttons button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    min-width: 180px;
+}
+
+.action-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.action-buttons button:first-child {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: white;
+}
+
+.action-buttons button:last-child {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: white;
+}
+
+.educational-section {
+    padding: 40px;
+}
+
+.educational-section h2 {
+    color: #1e40af;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    .header {
+        padding: 30px 20px;
+    }
+    
+    .content, .results-section, .educational-section {
+        padding: 25px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-buttons button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .phishing-container {
+        width: 90%;
+        padding: 30px;
+        margin: 20px;
+    }
+}
